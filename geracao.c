@@ -68,3 +68,15 @@ bool isOrdenado(int *v, int n){
    return resp;
 }
 //=============================================================================
+// PROCEDIMENTO PARA CRIAR O PIOR CASO DO QUICKSORT
+void piorCasoQuick(int *vet, int n){
+   int i, j;
+   for(i = 0; i<n/2; i++){
+      vet[i] = i;
+   }
+   vet[n/2] = i;
+   for(i = i+1, j = vet[(n/2)-1]; i<n; i++, j--){
+      vet[i] = j;
+   }
+}
+//=============================================================================
